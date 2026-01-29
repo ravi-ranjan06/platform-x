@@ -1,10 +1,15 @@
-import app from "./app";
 import dotenv from "dotenv";
+import path from "path";
+
+// Explicit path to .env
+dotenv.config({
+  path: path.resolve(__dirname, "./.env"),
+});
+
+import app from "./app";
 import connectMongoDB from "./config/mongo.db";
 
-dotenv.config();
-
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 
 const startServer = async () => {
   await connectMongoDB();
