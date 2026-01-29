@@ -1,0 +1,27 @@
+{
+  "name": "platform-x",
+  "version": "1.0.0",
+  "description": "MERN stack application boiler plate",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravi-ranjan06/platform-x.git"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "Ravi Ranjan <raviranjan621@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ravi-ranjan06/platform-x/issues"
+  },
+  "homepage": "https://github.com/ravi-ranjan06/platform-x#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "husky": "^8.0.0",
+    "ts-node": "^10.9.2"
+  }
+}

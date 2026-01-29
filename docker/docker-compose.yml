@@ -1,0 +1,47 @@
+version: "3.8"
+name: mern_boiler_plate
+
+services:
+  mongodb:
+    image: mongo:6
+    container_name: app_mongodb
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  postgres:
+    image: postgres:16
+    container_name: app_postgres
+    environment:
+      POSTGRES_USER: pg_user
+      POSTGRES_PASSWORD: pg_pass
+      POSTGRES_DB: platform_x_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mysql:
+    image: mysql:8
+    container_name: app_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: platform_x_db
+      MYSQL_USER: root_user
+      MYSQL_PASSWORD: root_pass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:7
+    container_name: app_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongo_data:
+  postgres_data:
+  mysql_data:

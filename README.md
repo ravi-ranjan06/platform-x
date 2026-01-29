@@ -1,6 +1,6 @@
 # Full Stack Application Boilerplate
 
-A full-stack platform built with:
+A full-stack (MERN) platform built with:
 
 - Backend: Node.js, TypeScript, Express
 - Frontend: React, TypeScript
@@ -10,3 +10,8 @@ A full-stack platform built with:
 - Containerization: Docker
 
 ## Project Structure
+movie-review-system/
+├── backend/ # API & business logic
+├── frontend/ # React UI
+├── docker/ # MongoDB & Redis configs
+├── docs/ # Architecture & notes
